@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwayat Pembelian - Jastip Yuk</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="purchase.css">
+  <script src="purchase.js" defer></script>
+</head>
+<body onload="loadPurchased()">
+  <header>
+    <h1>Riwayat Pembelian</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="product.html">Produk</a>
+      <a href="purchase.html" class="active">Riwayat</a>
+      <a href="cart.html" class="cart-icon" title="Lihat Keranjang">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+    </nav>
+  </header>
+  <main class="checkout-container">
+    <div id="purchasedList"></div>
+    <div id="noPurchase" class="no-purchase">
+      <p><i class="fa-solid fa-circle-info"></i> Belum ada produk yang dibeli.</p>
+      <a href="product.html" class="btn-primary"><i class="fa-solid fa-store"></i> Belanja Sekarang</a>
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 Jastip Yuk | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - Jastip Yuk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="product.css">
+    <script src="product.js"></script>
+</head>
+<body onload="updateCartCount()">
+    <header>
+    <div class="header-container">
+    <div class="logo-container">
+      <img src="img/JastipYuk.jpg" alt="Logo Jastip Yuk" class="logo">
+      <h1 id="title">Jastip Yuk</h1>
+    </div>
+        <nav>
+        <a href="index.html"> Home</a>
+        <a href="product.html" class="active">Produk</a>
+        <a href="purchase.html">Riwayat</a>
+        <a href="cart.html" class="cart-icon-container">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count" id="cartCount"></span>
+        </a>
+        </nav>
+    </header>
+
+    <section class="search-bar">
+        <input type="text" id="searchInput" placeholder="Cari produk...">
+    </section>
+
+    <section class="product-list" id="productList">
+        <div class="product" data-name="Nike Air Jordan 1" data-category="Sepatu Sneaker">
+            <img src="img/nike2.jpg" alt="Nike Air Jordan 1">
+            <h3>Nike Air Jordan 1</h3>
+            <span class="product-size">Size: 40</span> 
+            <p>Rp 2.500.000</p>
+            <button onclick="addToCart('sepatu')">
+                <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+            </button>
+        </div>
+
+        <div class="product" data-name="Gucci Women's Bag" data-category="Tas Luxury">
+            <img src="img/Tas.jpg" alt="Tas Gucci">
+            <h3>Gucci Women's Bag</h3>
+            <span class="product-size">Color: Black</span>
+            <p>Rp 19.800.000</p>
+            <button onclick="addToCart('tas')">
+                <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+            </button>
+        </div>
+
+        <div class="product" data-name="Rolex Yacht-Master" data-category="Jam Tangan Mewah">
+            <img src="img/Rolex.jpg" alt="Rolex Jam Tangan">
+            <h3>Rolex Yacht-Master</h3>
+            <span class="product-size">Garansi Resmi Internasional</span>
+            <p>Rp 45.000.000</p>
+            <button onclick="addToCart('jam')">
+                <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+            </button>
+        </div>
+
+        <div class="product" data-name="Dior Sauvage 100ml" data-category="Parfum Pria">
+            <img src="img/Dior2.jpg" alt="Dior Parfum">
+            <h3>Dior Sauvage 100ml</h3>
+            <span class="product-size">Eau de Parfum</span>
+            <p>Rp 2.200.000</p>
+            <button onclick="addToCart('parfum')">
+                <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+            </button>
+        </div>
+
+        <div class="product" data-name="MacBook Air M3" data-category="Laptop Gadget">
+            <img src="img/Macbook.jpg" alt="MacBook Laptop">
+            <h3>MacBook Air M3</h3>
+            <span class="product-size">Type: 8GB/256GB</span>
+            <p>Rp 22.000.000</p>
+            <button onclick="addToCart('laptop')">
+                <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+            </button>
+        </div>
+
+        <div class="product" data-name="JBL Headphone" data-category="Headphone Gadget">
+            <img src="img/JBL.jpg" alt="JBL Headphone">
+            <h3>JBL Headphone</h3>
+            <span class="product-size">Noise Cancelling</span>
+            <p>Rp 5.000.000</p>
+            <button onclick="addToCart('headphone')">
+                <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+            </button>
+        </div>
+
+        <div class="product" data-name="Arcteryx Jacket" data-category="Jaket Fashion">
+            <img src="img/Arcteryx Jacket.jpg" alt="Arcteryx Jacket">
+            <h3>Arcteryx Jacket</h3>
+            <span class="product-size"> Size : L</span>
+            <span class="product-size"> Color: Black</span>
+            <p>Rp 18.500.000</p>
+            <button onclick="addToCart('jaket')">
+                <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+            </button>
+        </div>
+
+        <div class="product" data-name="Canon EOS R8" data-category="Kamera Gadget">
+            <img src="img/Cannon.jpg" alt="Canon Kamera">
+            <h3>Canon EOS R8</h3>
+            <span class="product-size">Body Only</span>
+            <p>Rp 25.000.000</p>
+            <button onclick="addToCart('kamera')">
+                <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+            </button>
+        </div>
+
+        <div class="product" data-name="Salomon XT-6" data-category="Sneaker Sepatu">
+            <img src="img/Salomon XT-6.jpg" alt="Salomon XT-6">
+            <h3>Salomon XT-6</h3>
+            <span class="product-size">Size: 40</span>
+            <p>Rp 3.500.000</p>
+            <button onclick="addToCart('sneaker')">
+                <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+            </button>
+        </div>
+
+        <div class="product" data-name="AirPods Pro 2" data-category="Earbuds Gadget">
+            <img src="img/Airpods.jpg" alt="AirPods Earbuds">
+            <h3>AirPods Pro 2</h3>
+            <span class="product-size">Original Case</span>
+            <p>Rp 3.800.000</p>
+            <button onclick="addToCart('earbuds')">
+                <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+            </button>
+        </div>
+    </section>
+
+    <div id="notification" class="notification"></div>
+    
+    <footer>
+        <p>© 2025 Jastip Yuk | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
